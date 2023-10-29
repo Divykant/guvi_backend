@@ -1,6 +1,3 @@
-//divykantsingh08
-//ZKrSbEZkmBI2OSfi
-
 const mongoose = require("mongoose");
 
 const PersonSchema = new mongoose.Schema({

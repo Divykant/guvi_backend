@@ -1,15 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-// const PersonModel = require("./models/Person");
+const PersonModel = require("./models/Person");
 
 const app = express();
 app.use(express.json());
 app.use(cors());
-mongoose.connect(
-  "mongodb+srv://divykantsingh08:ZKrSbEZkmBI2OSfi@guvi-test-db.fpegr85.mongodb.net/?retryWrites=true&w=majority"
-  // "mongodb://127.0.0.1:27017/employee"
-);
+mongoose.connect("mongodb://localhost:27017/guvi_db");
 
 app.post("/login", (req, res) => {
   const { email, password } = req.body;
